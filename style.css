@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-header {
+  background: #4a76a8;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.chat-header #status {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background: #e5ddd5;
+}
+
+.message {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.message.you {
+  justify-content: flex-end;
+}
+
+.message.peer {
+  justify-content: flex-start;
+}
+
+.message .text {
+  max-width: 70%;
+  padding: 8px 12px;
+  border-radius: 15px;
+}
+
+.message.you .text {
+  background: #4a76a8;
+  color: #fff;
+  border-radius: 15px 15px 0 15px;
+}
+
+.message.peer .text {
+  background: #f1f0f0;
+  color: #000;
+  border-radius: 15px 15px 15px 0;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  outline: none;
+}
+
+.chat-input button {
+  border: none;
+  padding: 0 20px;
+  background: #4a76a8;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chat-input button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.chat-input button:hover:enabled {
+  background: #3b5f8a;
+}
